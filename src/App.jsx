@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css'
 import Navber from './component/navber/Navber'
 import Hamburger from 'hamburger-react';
+import Hero from './component/hero/Hero';
 
 
 
@@ -35,7 +36,7 @@ function App() {
         }
       </ul>
 
-      <h1>Bangladesh</h1>
+      <h1 className='text-2xl'>Bangladesh</h1>
       </span>
       
       <ul className='md:flex hidden gap-6'>
@@ -46,6 +47,7 @@ function App() {
       <button className='btn'>Button</button>
       </div>
     </nav>
+    <Hero></Hero>
       
       
     </>

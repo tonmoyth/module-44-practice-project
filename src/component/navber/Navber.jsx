@@ -1,11 +1,12 @@
-
+import { NavLink } from "react-router";
+import './navber.css'
 const Navber = ({nav}) => {
 
     
 
     return (
-        <ul>
-            <li className="hover:bg-amber-300 p-4"><a  href={nav.link}>{nav.name}</a></li>
+        <ul className="py-5">
+            <NavLink to={nav.link}>{nav.name}</NavLink>
         </ul>
     );
 };

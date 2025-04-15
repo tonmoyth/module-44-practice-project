@@ -3,6 +3,7 @@ import './App.css'
 import Navber from './component/navber/Navber'
 import Hamburger from 'hamburger-react';
 import Hero from './component/hero/Hero';
+import { Outlet } from 'react-router';
 
 
 
@@ -28,13 +29,7 @@ function App() {
       <button className='md:hidden' onClick={() => setOpen(!open)}>
         {open ? <Hamburger></Hamburger> : <Hamburger></Hamburger>}
       </button>
-      <ul className={`absolute transition-all duration-300
-        ${open ? 'top-16 left-0 ' : 'top-16 -left-24'}
-        md:hidden bg-blue-600 z-10`}>
-        {
-          navLink
-        }
-      </ul>
+      
 
       <h1 className='text-2xl'>Bangladesh</h1>
       </span>
@@ -47,7 +42,16 @@ function App() {
       <button className='btn'>Button</button>
       </div>
     </nav>
-    <Hero></Hero>
+
+    <div className='flex'>
+    <ul className='bg-amber-700 px-40'>
+        {
+          navLink
+        }
+      </ul>
+      <Outlet></Outlet>
+    </div>
+    
       
       
     </>

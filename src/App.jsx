@@ -3,7 +3,7 @@ import './App.css'
 import Navber from './component/navber/Navber'
 import Hamburger from 'hamburger-react';
 import Hero from './component/hero/Hero';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigation } from 'react-router';
 
 
 
@@ -20,6 +20,10 @@ function App() {
   const [open,setOpen] = useState(false);
   
   const navLink = navbarItems.map(nav => <Navber nav={nav} key={nav.id}></Navber>);
+
+  const navigation = useNavigation();
+  const isNavigating = Boolean(navigation.location);
+
 
   return (
     <>
@@ -49,6 +53,8 @@ function App() {
           navLink
         }
       </ul>
+
+      {isNavigating && <span>Loading..</span>}
       <Outlet></Outlet>
     </div>
     

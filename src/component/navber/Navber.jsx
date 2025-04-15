@@ -6,7 +6,12 @@ const Navber = ({nav}) => {
 
     return (
         <ul className="py-5">
-            <NavLink to={nav.link}>{nav.name}</NavLink>
+            <NavLink to={nav.link}>
+                {({isPending})=>(
+                    <span>{nav.name}{isPending && <span>Loading...</span>}</span>
+                )}
+                
+                </NavLink>
         </ul>
     );
 };

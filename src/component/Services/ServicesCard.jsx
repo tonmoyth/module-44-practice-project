@@ -1,13 +1,18 @@
+import { Link } from "react-router";
 
 const ServicesCard = ({services}) => {
-    const {icon,title,price} = services;
+    const {id,name,email,username} = services;
     
     
     return (
         <div className="border p-4 m-4">
-            <span>{icon}</span>
-            <h1>{title}</h1>
-            <span>{price}</span>
+            <span>{username}</span>
+            <h1>{name}</h1>
+            <span>{email}</span>
+            <br />
+            <Link to={`/services/${id}`}>
+            <button className="btn">Details</button>
+            </Link>
         </div>
     );
 };

@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { use } from 'react';
+import ServicesCard from './ServicesCard';
 
-const Services = () => {
+const Services = ({servicesPromise}) => {
+
+    const servicesData = use(servicesPromise);
+    
     return (
-        <div>
-            <h1>This is Services</h1>
+        <div className='grid grid-cols-3'>
+            {
+               servicesData.map(services => <ServicesCard 
+                services={services}
+                key={services.id}
+                ></ServicesCard>) 
+            }
         </div>
     );
 };

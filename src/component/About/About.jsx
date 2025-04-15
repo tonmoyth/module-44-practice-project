@@ -1,9 +1,15 @@
 import React from 'react';
+import { useLoaderData } from 'react-router';
+import AboutCard from './AboutCard/AboutCard';
 
 const About = () => {
+    const aboutData = useLoaderData();
+   
     return (
-        <div>
-            <h1>This is About</h1>
+        <div className='grid grid-cols-2'>
+            {
+                aboutData.map(about => <AboutCard key={about.id} about={about}></AboutCard>)
+            }
         </div>
     );
 };

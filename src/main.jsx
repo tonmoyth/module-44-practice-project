@@ -1,12 +1,20 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Home from './component/Home/Home.jsx'
 import About from './component/About/About.jsx'
-import Services from './component/Services/Services.jsx'
+
 import Blog from './component/Blog/Blog.jsx'
 import Contact from './component/Contact/Contact.jsx'
+import ServicesCard from './component/Services/ServicesCard.jsx'
+import Services from './component/Services/Services.jsx'
+
+
+
+
+const servicesPromise = fetch('Services.json')
+.then(res => res.json());
 
 const router = createBrowserRouter([
   {
@@ -19,11 +27,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
+        loader: () => fetch('About.json'),
         Component: About
       },
       {
         path: "/services",
-        Component: Services
+        element: <Suspense fallback={<h1>Loading</h1>}> 
+          <Services servicesPromise={servicesPromise}></Services>
+        </Suspense>
+        
       },
       {
         path: "/blog",

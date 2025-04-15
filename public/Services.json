@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "title": "Web Development",
+      "description": "Custom websites using React, Next.js, and modern frameworks.",
+      "icon": "💻",
+      "path": "/web-development",
+      "price": "$499+"
+    },
+    {
+      "id": 2,
+      "title": "Mobile App Development",
+      "description": "Cross-platform apps with Flutter or React Native.",
+      "icon": "📱",
+      "path": "/mobile-apps",
+      "price": "$799+"
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Design",
+      "description": "User-centered designs crafted in Figma or Adobe XD.",
+      "icon": "🎨",
+      "path": "/ui-ux",
+      "price": "$299+"
+    },
+    {
+      "id": 4,
+      "title": "SEO Optimization",
+      "description": "Boost your site’s ranking on Google and other search engines.",
+      "icon": "🔍",
+      "path": "/seo",
+      "price": "$199/month"
+    },
+    {
+      "id": 5,
+      "title": "Cloud Solutions",
+      "description": "AWS, Azure, and Google Cloud deployment & management.",
+      "icon": "☁️",
+      "path": "/cloud",
+      "price": "$999+"
+    },
+    {
+      "id": 6,
+      "title": "DevOps Services",
+      "description": "CI/CD pipelines, Docker, and Kubernetes setup.",
+      "icon": "🛠️",
+      "path": "/devops",
+      "price": "$599+"
+    },
+    {
+      "id": 7,
+      "title": "E-Commerce Solutions",
+      "description": "Online stores with Shopify, WooCommerce, or custom platforms.",
+      "icon": "🛒",
+      "path": "/ecommerce",
+      "price": "$699+"
+    },
+    {
+      "id": 8,
+      "title": "Content Writing",
+      "description": "SEO-friendly blog posts, articles, and web content.",
+      "icon": "✍️",
+      "path": "/content-writing",
+      "price": "$0.10/word"
+    },
+    {
+      "id": 9,
+      "title": "Digital Marketing",
+      "description": "Social media, PPC, and email marketing campaigns.",
+      "icon": "📢",
+      "path": "/digital-marketing",
+      "price": "$299/month"
+    },
+    {
+      "id": 10,
+      "title": "IT Consulting",
+      "description": "Strategic tech advice for startups and",
+      "icon": "📊",
+    "path": "/consulting",
+    "price": "$150/hour"    
+     }
+]

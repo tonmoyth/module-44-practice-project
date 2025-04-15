@@ -44,7 +44,7 @@ function App() {
     </nav>
 
     <div className='flex'>
-    <ul className='bg-amber-700 px-40'>
+    <ul className='bg-amber-700 px-40 h-screen'>
         {
           navLink
         }
